@@ -12,57 +12,70 @@ import sys
 import climage
 import os
 
-def StartupDialog():
-  print(colored("Booting fans...", "cyan"))
-  time.sleep(0.5)
-  print(colored("Loading hard-drive...", "cyan"))
-  time.sleep(0.5)
-  print(colored("Powering CPU...", "cyan"))
-  time.sleep(0.25)
-  print(colored("Loading User-Information...", "cyan"))
-  time.sleep(0.2)
-  print(colored("Welcome, Dr. ███████", "cyan"))
-  time.sleep(0.35)
-  print(colored("Password:", "cyan"))
-  time.sleep(0.2)
-  print(colored("█████████████", "cyan"))
-  time.sleep(0.3)
-  print(colored("Authenticating with the FOUNDATION...", "cyan"))
-  time.sleep(0.2)
-  print(colored("Successfully authenticated credentials.", "green"))
-  time.sleep(0.1)
-  print(colored("Welcome Dr. ███████, happy researching!", "cyan"))
-  time.sleep(0.3)
-  print(colored("Loading SCP Database...", "cyan"))
-  time.sleep(0.1)
-  print(colored("SCP Safe: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Euclid: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Keter: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Thaumiel: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Neutralized: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Apollyon: Loaded!", "green"))
-  time.sleep(0.1)
-  print(colored("SCP Archon: Loaded!", "green"))
-  time.sleep(0.25)
-  print(colored("MTF Personnel... Loaded!", "green"))
-  time.sleep(0.5)
-  print(colored("Scientist Personnel... Loaded!", "green"))
-  time.sleep(0.2)
-  print(colored("Security Personnel... Loaded!", "green"))
-  time.sleep(0.75)
-  print(colored("All systems: OK\nWelcome to the public SCP Database, Dr. ███████.", "cyan"))
 
-#StartupDialog()
+def StartupDialog():
+    print(colored("Booting fans...", "cyan"))
+    time.sleep(0.5)
+    print(colored("Loading hard-drive...", "cyan"))
+    time.sleep(0.5)
+    print(colored("Powering CPU...", "cyan"))
+    time.sleep(0.25)
+    print(colored("Loading User-Information...", "cyan"))
+    time.sleep(0.2)
+    print(colored("Welcome, Dr. ███████", "cyan"))
+    time.sleep(0.35)
+    print(colored("Password:", "cyan"))
+    time.sleep(0.2)
+    print(colored("█████████████", "cyan"))
+    time.sleep(0.3)
+    print(colored("Authenticating with the FOUNDATION...", "cyan"))
+    time.sleep(0.2)
+    print(colored("Successfully authenticated credentials.", "green"))
+    time.sleep(0.1)
+    print(colored("Welcome Dr. ███████, happy researching!", "cyan"))
+    time.sleep(0.3)
+    print(colored("Loading SCP Database...", "cyan"))
+    time.sleep(0.1)
+    print(colored("SCP Safe: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Euclid: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Keter: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Thaumiel: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Neutralized: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Apollyon: Loaded!", "green"))
+    time.sleep(0.1)
+    print(colored("SCP Archon: Loaded!", "green"))
+    time.sleep(0.25)
+    print(colored("MTF Personnel... Loaded!", "green"))
+    time.sleep(0.5)
+    print(colored("Scientist Personnel... Loaded!", "green"))
+    time.sleep(0.2)
+    print(colored("Security Personnel... Loaded!", "green"))
+    time.sleep(0.75)
+    print(
+        colored(
+            "All systems: OK\nWelcome to the public SCP Database, Dr. ███████.", "cyan"
+        )
+    )
+
+
+# StartupDialog()
 
 while True:
-  scpinput = input(colored("\nWhat would you like to search for?\n({SCP Number}=Information on a specific SCP)\n(DR=Information on Doctors)\n(MTF=Information on MTF Personnel)\n(DC=Information on D Class Personnel)\n(RC=Information on Researcher Personnel)\n(DI=Information on Director Personnel)\n(SC=SCP Objects of interest)\n> ", "cyan")).lower()
-  if scpinput == "mtf":
-    print(colored("""Mobile Task Forces (MTFs) are elite units comprised of personnel drawn from across the Foundation and are mobilized to deal with specific threats or situations that sometimes exceed the operational capacity or expertise of regular field personnel and — as their name suggests — may be relocated between facilities or locations as they are needed. Mobile Task Force personnel represent the "best of the best" of the Foundation.
+    scpinput = input(
+        colored(
+            "\nWhat would you like to search for?\n({SCP Number}=Information on a specific SCP)\n(DR=Information on Doctors)\n(MTF=Information on MTF Personnel)\n(DC=Information on D Class Personnel)\n(RC=Information on Researcher Personnel)\n(DI=Information on Director Personnel)\n(SC=SCP Objects of interest)\n> ",
+            "cyan",
+        )
+    ).lower()
+    if scpinput == "mtf":
+        print(
+            colored(
+                """Mobile Task Forces (MTFs) are elite units comprised of personnel drawn from across the Foundation and are mobilized to deal with specific threats or situations that sometimes exceed the operational capacity or expertise of regular field personnel and — as their name suggests — may be relocated between facilities or locations as they are needed. Mobile Task Force personnel represent the "best of the best" of the Foundation.
 
 Mobile Task Forces vary greatly in size, composition, and purpose. A battalion-strength combat-oriented task force trained to deal with highly aggressive anomalous entities may consist of hundreds of troops plus support personnel, vehicles, and equipment and can be deployed in whole or in part to deal with threats across the globe. However, a Mobile Task Force can also be a small, specialized intelligence-gathering or investigative task force that may have fewer than a dozen personnel if that is deemed sufficient to accomplish their goals.
 
@@ -83,9 +96,14 @@ Mobile Task Forces are typically commissioned as deemed necessary by the Foundat
 
 DEACTIVATION
 
-Mobile Task Forces created for the purpose of containing a particular anomaly are typically deactivated at the end of the recovery operation or when ongoing containment is deemed no longer necessary. Occasionally, such task forces remain operational if the expertise and experiences learned are considered useful for future incidents, but otherwise the task force will likely be disbanded and its personnel returned to their prior posts. Very rarely, a Mobile Task Force will also be disbanded if it suffers sufficient casualties to render it incapable of operation. In these cases, if the prior capability of that particular task force is deemed necessary, a new task force may be commissioned to replace it.""", "green"))
-  if scpinput == "dr":
-    print(colored("""Dr. Daniel Asheworth: Thaumaturgist and self-proclaimed alchemist. Hot-headed, short-tempered, and sometimes arrogant, but with a good heart. Born from an unknown American mother and an unknown Polish father in the late 1950s. One of few people in the Foundation capable of prolonging their youth through anomalous means.
+Mobile Task Forces created for the purpose of containing a particular anomaly are typically deactivated at the end of the recovery operation or when ongoing containment is deemed no longer necessary. Occasionally, such task forces remain operational if the expertise and experiences learned are considered useful for future incidents, but otherwise the task force will likely be disbanded and its personnel returned to their prior posts. Very rarely, a Mobile Task Force will also be disbanded if it suffers sufficient casualties to render it incapable of operation. In these cases, if the prior capability of that particular task force is deemed necessary, a new task force may be commissioned to replace it.""",
+                "green",
+            )
+        )
+    if scpinput == "dr":
+        print(
+            colored(
+                """Dr. Daniel Asheworth: Thaumaturgist and self-proclaimed alchemist. Hot-headed, short-tempered, and sometimes arrogant, but with a good heart. Born from an unknown American mother and an unknown Polish father in the late 1950s. One of few people in the Foundation capable of prolonging their youth through anomalous means.
 
 Lead of the Damien Nowak Case. Believed to once have had been a temporary member of the Wanderers' Library and Wilson's Wildlife Solutions, Daniel Asheworth has proven numerous times to be a useful asset in Site-120's Director Council.
 
@@ -186,17 +204,27 @@ Dr. William W. Wettle: Head of Replication Studies at Site-43. Nobody's favourit
 What do I put here
 Dr. Thaddeus Xyank: Presently low-level but extremely significant Foundation researcher. Specializes in temporal anomalies. Somewhat arrogant and long-winded, but considered an up-and-coming genius.
 
-Where is he? Where isn't he?""", "green"))
-  if scpinput == "dc":
-    print(colored("""D-952 (formerly Veronica Fitzroy): Anartist musician, co-founder of the "House of Spades" rock band, partially responsible for the creation of SCP-952. In custody following two failed suicide attempts, designated D-952. Missing, presumed deceased.
+Where is he? Where isn't he?""",
+                "green",
+            )
+        )
+    if scpinput == "dc":
+        print(
+            colored(
+                """D-952 (formerly Veronica Fitzroy): Anartist musician, co-founder of the "House of Spades" rock band, partially responsible for the creation of SCP-952. In custody following two failed suicide attempts, designated D-952. Missing, presumed deceased.
 
 D-7294: Former professional cellist with a history of violent behavior towards women. Useful enough to be exempt from monthly termination, but should be kept away from female personnel.
 
 D-11424 (formerly Tony Marquez): Notable for surviving many experiments, some involving dangerous anomalies, and so considered an exploration specialist. Now deceased, number reassigned.
 
-""", "green"))
-  if scpinput == "rc":
-    print(colored("""Professor Anders Bjornsen: Field researcher specializing in anomalous psychologies and societal abnormalities, working as an SCP Analyst for the Psychology Department. Previously assigned to the Memetics Department, Theology & Theometrics Department, and Cognitohazard Research Department. Respected for remaining calm during multiple containment breaches.
+""",
+                "green",
+            )
+        )
+    if scpinput == "rc":
+        print(
+            colored(
+                """Professor Anders Bjornsen: Field researcher specializing in anomalous psychologies and societal abnormalities, working as an SCP Analyst for the Psychology Department. Previously assigned to the Memetics Department, Theology & Theometrics Department, and Cognitohazard Research Department. Respected for remaining calm during multiple containment breaches.
 
 Researcher Jacob Conwell: Anomalous Materials Analyst. Masters Degree in Analytical Chemistry. Current head of the Site-64 AMat Lab. Frequently called upon, Conwell has made a name for himself in the Foundation as a hard worker.
 
@@ -213,9 +241,14 @@ Technical Researcher David Rosen: Technical Advisor and Researcher. Responsible 
 You want me to what?
 Junior Researcher James: Wrote Special Containment Procedures for SCP-078, SCP-682, SCP-789, SCP-8231 and SCP-9000 before going AWOL to found the kA0s insuRgnc3e
 
-Seriously, who uploaded this into the database? Need a witness for summary deletion.""", "green"))
-  if scpinput == "di":
-    print(colored("""Director Jean Karlyle Aktus: Director of Site-81. A seemingly impossibly old man, known for his analytic approach to containment leading to thorough and successful containment procedures. Aktus serves as the head of the Foundation's Classification Committee, and is also involved with several exotic mobile task forces, including Alpha-9 and Kappa-10.
+Seriously, who uploaded this into the database? Need a witness for summary deletion.""",
+                "green",
+            )
+        )
+    if scpinput == "di":
+        print(
+            colored(
+                """Director Jean Karlyle Aktus: Director of Site-81. A seemingly impossibly old man, known for his analytic approach to containment leading to thorough and successful containment procedures. Aktus serves as the head of the Foundation's Classification Committee, and is also involved with several exotic mobile task forces, including Alpha-9 and Kappa-10.
 
 Won't you spare me over ‘til a another year?
 Dr. Charles Anborough: Director of Sites 59 and 117, Keter containment specialist. Curious and crippled, a nuclear physicist who can't seem to stay away from cataclysmic threats. Fortunately, through an absurd combination of improvisation and miracles, he seems to be the best man for the job. His sad smile and dry humor belie the confused past of a man always searching for answers.
@@ -255,9 +288,14 @@ Director Cody Westbrook: The former protege of Julian Corwin, Cody Westbrook was
 
 After Delta-3 was dissolved, Westbrook was promoted to Site Director of Site-246 to fill the vacancy left by Director Corwin's transfer to Site-64. He has served in that role ever since.
 
-Marion Wheeler: Claims to be the Chief of the Antimemetics Division, despite the fact that there is no Antimemetics Division. She somehow still has full Foundation credentials, a security breach that is currently under investigation.""", "green"))
-  if scpinput == "sc":
-    print(colored("""SCP-035 AKA "The Possessive Mask": A white porcelain mask constantly secreting a corrosive black substance. Capable of taking possession of anyone wearing it, displaying an intelligent but sadistic personality, skilled at manipulation. Also capable of exerting anomalous effects on its surroundings if not regularly provided with new hosts. Has taken an interest in SCP-682 as an indestructible host.
+Marion Wheeler: Claims to be the Chief of the Antimemetics Division, despite the fact that there is no Antimemetics Division. She somehow still has full Foundation credentials, a security breach that is currently under investigation.""",
+                "green",
+            )
+        )
+    if scpinput == "sc":
+        print(
+            colored(
+                """SCP-035 AKA "The Possessive Mask": A white porcelain mask constantly secreting a corrosive black substance. Capable of taking possession of anyone wearing it, displaying an intelligent but sadistic personality, skilled at manipulation. Also capable of exerting anomalous effects on its surroundings if not regularly provided with new hosts. Has taken an interest in SCP-682 as an indestructible host.
 
 It is suspected that SCP-035 was once a resident of Alagadda, the Court of the Hanged King, specifically as the Black Lord, Wearer of the Anguished Mask.
 
@@ -343,25 +381,41 @@ SCP-5056-B AKA Philip Eugene Deering: Constantly verbally abused by the other ha
 
 SCP-6599 AKA HOGSLICE consists of a series of online accounts that are consistently hostile, argumentative and boastful. Upon provocation by a member of an online community, SCP-6599-1, a humanoid entity resembling professional wrestler Scott Rechsteiner, physically manifests to verbally abuse and physically assault its chosen target. While attacks upon non-anomalous humans typically end in hospitalisation, interactions with other anomalous entities have had less predictable results.
 
-WHAT EVEN IS THIS""", "green"))
-  elif scpinput.isnumeric:
-    # try:
-    #   print(colored(scpscraper.get_scp(scpinput), "green"))
-    # except:
-    #   pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Object Class"], "green"))
-    except:
-      pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Special Containment Procedures"], "green"))
-    except:
-      pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Description"], "green"))
-    except:
-      pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Addendum"], "green"))
-    except:
-      pass
+WHAT EVEN IS THIS""",
+                "green",
+            )
+        )
+    elif scpinput.isnumeric:
+        try:
+            print(colored(scpscraper.get_scp(scpinput), "green"))
+        except:
+            pass
+        try:
+            print(
+                colored(
+                    scpscraper.get_scp(scpinput)["content"]["Object Class"], "green"
+                )
+            )
+        except:
+            pass
+        try:
+            print(
+                colored(
+                    scpscraper.get_scp(scpinput)["content"][
+                        "Special Containment Procedures"
+                    ],
+                    "green",
+                )
+            )
+        except:
+            pass
+        try:
+            print(
+                colored(scpscraper.get_scp(scpinput)["content"]["Description"], "green")
+            )
+        except:
+            pass
+        try:
+            print(colored(scpscraper.get_scp(scpinput)["content"]["Addendum"], "green"))
+        except:
+            pass
