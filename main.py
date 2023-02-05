@@ -12,7 +12,49 @@ import sys
 import climage
 import os
 
+
 def StartupDialog():
+  print(colored("""  .  . .  .  . .  .  . . :%t%t%t%%t%t%t%%t%%; .  .  . .  .  . .  .  . 
+   .       .       .     X:%%%%%%%%%%%%%%%St;t    .       .       .   
+     .  .    .  .    .  :.;8;::;:::;::;::::t.@ .    .  .    .  .    . 
+ .       .       .      @@%%             ..@ 8  .       .       .     
+   .  .    .  .    ..8; @X%   .  .  .  .   X%t.S8:.  .    .  .    .  .
+  .    .  .    .  .8 :t X;.       .        .:88X.t:.  .  .    .  .    
+    .       .   ;. 8  %     .  . .:;..  .     .%: 8S%S     .       .  
+  .   . .    .%@8S;%         .   88S; .   .       t;;XS8 .   . .    . 
+    .     .  8S.8:   .  . .    ..@S ::  .   .      .. SX%   .    .    
+  .    .   . 8S%. .   .   ;8;X:8@t:.;88t tS%  .   .  .8 X@;    .   .  
+     .   .% XX;    .   %. S   .;8@..88;:.  ;t@@ .       .8S8.    .   .
+  .    . . ;:   .    .%8    8S%%.8t:: ;@88.. .St.  .     S;S@  .      
+    .   .Xt@: .   . @ S  XStt.  .8X..  . ;@88  .:S   . .  .; :    . . 
+  .   . t;@..   . .;X. 8:t    .  8t::.     .:tt  :8t       :;@: .     
+    .  S8X%        :..XX    .  . 8X.. ..  .  .% .. 8  .  .   ;X   .  .
+  .    S.; .  .  @8. t8   .    ;X8..@88.    .  ; :.;        8t        
+     .S8Xt     .%X  X@       . .t:.   ;  .        ::X@ . .   @;8.  .  
+  .   %.8   .    . .     . .     @. 8S .   .     8X  8      ...S .   .
+    . X.     . .S  8X  .      .  S;tS    .   .   :   St  .   8t       
+  .   S:X .    ;%         .  .   .S@ .     .   .  @  S8   .  %8t;  .  
+      S:@   .  ;X      . ..;;tSX8@ .S8@X%t;:.     S  S8.     %8X;    .
+  . . 8:S     ...  :;    @S@XS;t@%  8;:tXS@8.. .  @  8X .  . XX:: .   
+     tX.t . .  .S  :S . %t;  .:t8   .%S:.  @S8.  X8       .  %.     . 
+  . 8t t8.      8X .  t%8  %;:8@   .  : ..8:.: 8 S  .t  .    8X. %    
+  %8t8t%.   .  ..8..;.@.8 %;;;8      . t 8t8S;;;S%:. ;.    .  %;X88@  
+  % @%    .    :88;:. 8X    .;  . .        ...% .. . .S  .      88@8. 
+   %S8X.     . X. t@    %           .        :8.. 8@   ;    .  : X8   
+ .  88:X  .    X8;X%8;. 8X@.  . .     .  . %.%  . @;%8@  .    ;@X:  . 
+     Xt88.  .      . 8St..:%@;8;. . . ;X%X:;  : X  .   .   . % 8X     
+  .  .88%X    .  .     @.:.   :8. 88S 8:.  . X%  .   .      .S;S  . . 
+    .  SX ;  .      .   .8X:@:....     ..@t@S;     .    . .:@X.. .    
+  .     8SS8.   . .   .   ...%@:;X88Xt.XX;:    .      .   ;S@;      . 
+     .  .@t . .@tX%     .           .           . .:tXt  .8:. . . .   
+  .   .   t@  X8%8888:      .  .  .   . .  . .  .@tS@88S SXX.        .
+   .    .  @@:8;;:@@88 :@:   .      .       .St8X8 t;.S@ 8:. . .  .   
+     .    .         :;..:%8@t   .      . ;8t ;.8%t                  . 
+ .     .     .    .  ..@.X.@8X;. 888@   S88:S.8:       .  .  .  . .   
+   . .   .     .          . ;X8@%:  :SX8X;..   .   .        .        .
+  .    .   . .   .  . .          .   .    .      .   . . .    . .  .  
+     .    .        .    .  .   .        .   . .    .       .          
+  .     .    . . .    .   .  .    . .     .     .    .  .    .  . . . """, "cyan"))
   print(colored("Booting fans...", "cyan"))
   time.sleep(0.5)
   print(colored("Loading hard-drive...", "cyan"))
@@ -59,8 +101,10 @@ def StartupDialog():
 
 #StartupDialog()
 
+
+StartupDialog()
 while True:
-  scpinput = input(colored("\nWhat would you like to search for?\n({SCP Number}=Information on a specific SCP)\n(DR=Information on Doctors)\n(MTF=Information on MTF Personnel)\n(DC=Information on D Class Personnel)\n(RC=Information on Researcher Personnel)\n(DI=Information on Director Personnel)\n(SC=SCP Objects of interest)\n> ", "cyan")).lower()
+  scpinput = input(colored("\nWhat would you like to search for?\n({SCP Number}=Information on a specific SCP)\n(DR=Information on Doctors)\n(MTF=Information on MTF Personnel)\n(DC=Information on D Class Personnel)\n(RC=Information on Researcher Personnel)\n(DI=Information on Director Personnel)\n(SC=SCP Objects of interest)\n(QUIT=Shuts down the SCP Database)\n> ", "cyan")).lower()
   if scpinput == "mtf":
     print(colored("""Mobile Task Forces (MTFs) are elite units comprised of personnel drawn from across the Foundation and are mobilized to deal with specific threats or situations that sometimes exceed the operational capacity or expertise of regular field personnel and — as their name suggests — may be relocated between facilities or locations as they are needed. Mobile Task Force personnel represent the "best of the best" of the Foundation.
 
@@ -344,24 +388,32 @@ SCP-5056-B AKA Philip Eugene Deering: Constantly verbally abused by the other ha
 SCP-6599 AKA HOGSLICE consists of a series of online accounts that are consistently hostile, argumentative and boastful. Upon provocation by a member of an online community, SCP-6599-1, a humanoid entity resembling professional wrestler Scott Rechsteiner, physically manifests to verbally abuse and physically assault its chosen target. While attacks upon non-anomalous humans typically end in hospitalisation, interactions with other anomalous entities have had less predictable results.
 
 WHAT EVEN IS THIS""", "green"))
+  if scpinput == "quit":
+    sys.exit()
   elif scpinput.isnumeric:
     # try:
     #   print(colored(scpscraper.get_scp(scpinput), "green"))
     # except:
     #   pass
     try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Object Class"], "green"))
+      objclass = scpscraper.get_scp(scpinput)["content"]["Object Class"]
+      print(colored("Gathering Object Class... ", "green"))
+    except:
+      objclass = ""
+    try:
+      specconpro = scpscraper.get_scp(scpinput)["content"]["Special Containment Procedures"]
+      print(colored("Gathering Special Containment Procedures... ", "green"))
+    except:
+      specconpro = ""
+    try:
+      desc = scpscraper.get_scp(scpinput)["content"]["Description"]
+      print(colored("Gathering Description... ", "green"))
     except:
       pass
     try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Special Containment Procedures"], "green"))
+      addendumvar = scpscraper.get_scp(scpinput)["content"]["Addendum"]
+      print(colored("Gathering Addendum... ", "green"))
     except:
-      pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Description"], "green"))
-    except:
-      pass
-    try:
-      print(colored(scpscraper.get_scp(scpinput)["content"]["Addendum"], "green"))
-    except:
-      pass
+      addendumvar = ""
+      
+    print(colored(objclass+"\n"+specconpro+"\n"+desc+"\n"+addendumvar, "green"))
