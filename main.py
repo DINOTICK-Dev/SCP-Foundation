@@ -409,7 +409,7 @@ WHAT EVEN IS THIS""", "green"))
       desc = scpscraper.get_scp(scpinput)["content"]["Description"]
       print(colored("Gathering Description... ", "green"))
     except:
-      pass
+      desc = ""
     try:
       addendumvar = scpscraper.get_scp(scpinput)["content"]["Addendum"]
       print(colored("Gathering Addendum... ", "green"))
