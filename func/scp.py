@@ -13,6 +13,5 @@ def GetSCP(scpid,):
   else:
     url = f"http://scp-wiki.wikidot.com/scp-series-{ceil(scpid/1000, 0)}"
     
-  r = requests.get(url)
-  print(r[""])
+  
 
